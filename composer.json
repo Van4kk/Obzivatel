@@ -1,7 +1,48 @@
 {
     "name": "vaniusha/obzivatel-bot",
+    "description": "",
+    "keywords": [],
+    "homepage": "https://t.me/MegaObzivatel3000Bot",
+    "authors": [
+        {
+            "name": "Cucu Ionut - Nicu",
+            "email": "cucuionutnicu@yahoo.com",
+            "homepage": "https://github.com/Van4kk",
+            "role": "developer"
+        }
+    ],
     "type": "project",
     "license": "MIT",
+    "require": {
+        "php": "8.2.3",
+        "phpoption/phpoption": "^1.9",
+        "vlucas/phpdotenv": "^5.5",
+        "symfony/error-handler": "^6.2",
+        "ext-fileinfo": "*",
+        "ext-curl": "*",
+        "rakibtg/sleekdb": "^2.15"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "symfony/var-dumper": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Obzivatel\\": "app/"
+        },
+        "files": [
+            "app/Helpers/helpers.php",
+            "app/Helpers/dates.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
     "minimum-stability": "stable",
-    "require": {}
+    "prefer-stable": true
 }
